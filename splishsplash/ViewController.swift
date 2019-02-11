@@ -20,21 +20,33 @@ class ViewController: UIViewController {
         let touchDownGesture = UILongPressGestureRecognizer(target: self, action: #selector(touchPressed))
         touchDownGesture.minimumPressDuration = 0
         
-        
+        // Add gesture recognizer to view
         self.view.addGestureRecognizer(touchDownGesture)
-        
-
     }
 
 
     @objc func touchPressed(gesture: UITapGestureRecognizer) {
         // Only trigger on touch down
         if gesture.state == .began {
+            
+            // Get point where user tapped
             let point = gesture.location(in: self.view)
-            let radius = CGFloat(Int.random(in: 60 ..< 150))
-            let circle = Circle(frame: CGRect(x: point.x, y: point.y, width: radius, height: radius))
-            view.addSubview(circle)
-            circle.animate()
+
+            // Set CGRect based on where user tapped
+            let frame = CGRect(x: point.x, y: point.y, width: 0, height: 0)
+
+            // Initialize a SplishSplash instance with frame
+            let splishsplash = SplishSplash(frame: frame)
+
+            // Add the subview
+            view.addSubview(splishsplash)
+            
+            // Animate
+            splishsplash.animate() {
+                print("Clean up SplishSplash")
+                splishsplash.removeFromSuperview()
+            }
+
         }
     }
 
