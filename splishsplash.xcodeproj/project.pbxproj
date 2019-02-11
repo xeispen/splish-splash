@@ -12,6 +12,7 @@
 		9D22D4F6220DFF6F00D36240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D22D4F5220DFF6F00D36240 /* Assets.xcassets */; };
 		9D22D4F9220DFF6F00D36240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D22D4F7220DFF6F00D36240 /* LaunchScreen.storyboard */; };
 		9D22D501220E056900D36240 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D22D500220E056900D36240 /* Circle.swift */; };
+		9D22D5032210F5C000D36240 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D22D5022210F5C000D36240 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9D22D4F8220DFF6F00D36240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D22D4FA220DFF6F00D36240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D22D500220E056900D36240 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		9D22D5022210F5C000D36240 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				9D22D4EE220DFF6D00D36240 /* AppDelegate.swift */,
 				9D22D4F0220DFF6D00D36240 /* ViewController.swift */,
 				9D22D500220E056900D36240 /* Circle.swift */,
+				9D22D5022210F5C000D36240 /* Constants.swift */,
 				9D22D4F5220DFF6F00D36240 /* Assets.xcassets */,
 				9D22D4F7220DFF6F00D36240 /* LaunchScreen.storyboard */,
 				9D22D4FA220DFF6F00D36240 /* Info.plist */,
@@ -137,6 +140,7 @@
 				9D22D4F1220DFF6D00D36240 /* ViewController.swift in Sources */,
 				9D22D4EF220DFF6D00D36240 /* AppDelegate.swift in Sources */,
 				9D22D501220E056900D36240 /* Circle.swift in Sources */,
+				9D22D5032210F5C000D36240 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
