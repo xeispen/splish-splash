@@ -75,8 +75,8 @@ class SplishSplash: UIView {
         // Assign a random radius between 60 and 150
         let radius = CGFloat(Float.random(in: CircleParams.minCircleRadius.rawValue...CircleParams.maxCircleRadius.rawValue))
         
-        // Create a frame with randomly generated radius
-        let splishFrame = CGRect(x: 0, y: 0, width: radius, height: radius)
+        // Create a frame with randomly generated radius, passing in as diameter
+        let splishFrame = CGRect(x: 0, y: 0, width: radius * 2, height: radius * 2)
         
         // Initialize a Splish
         self.splish = Circle(frame: splishFrame)
@@ -106,13 +106,13 @@ class SplishSplash: UIView {
         // Randomly generate between 2 to 5 splashes and add them to the Splash array
         for _ in 1...Int.random(in: SplashCount.min.rawValue...SplashCount.max.rawValue) {
             // Convert Splish radius into a Float
-            let splishRadius = Float(splish.size)
+            let splishDiameter = Float(splish.size)
             // Calculate the Splash radius to be 20% to 40% less than the Splish Radius
-            let splashRadius = splishRadius - Float.random(in: SplashScale.min.rawValue...SplashScale.max.rawValue) * splishRadius
+            let splashDiameter = splishDiameter - Float.random(in: SplashScale.min.rawValue...SplashScale.max.rawValue) * splishDiameter
             // Calculate the coordinates of Splash center to be to be 60 to 100 pixels away from center of Splish
             let (x, y) = polarToCartesian(radius: Float.random(in: SplashRadius.min.rawValue...SplashRadius.max.rawValue), angle: Float.random(in: 0...360))
             // Create a frame for the Splash with the newly calcualted coordinate and initialize a Splash
-            let frame = CGRect(x: CGFloat(x), y: CGFloat(y), width: CGFloat(splashRadius), height: CGFloat(splashRadius))
+            let frame = CGRect(x: CGFloat(x), y: CGFloat(y), width: CGFloat(splashDiameter), height: CGFloat(splashDiameter))
             let splash = Circle(frame: frame)
             // Set background color of the splash to the same as splish
             splash.backgroundColor = self.splish.backgroundColor
